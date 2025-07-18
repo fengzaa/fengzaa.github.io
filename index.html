@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello GitHub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#36D399',
+                        dark: '#1E293B',
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .animate-float {
+                animation: float 3s ease-in-out infinite;
+            }
+            @keyframes float {
+                0% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+                100% { transform: translateY(0px); }
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen font-inter">
+    <!-- 导航栏 -->
+    <nav class="bg-white/80 backdrop-blur-sm shadow-sm fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fa fa-github text-2xl text-primary"></i>
+                <span class="font-bold text-lg text-dark">HelloGitHub</span>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">Home</a>
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">About</a>
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">Projects</a>
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa fa-bars text-xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 主内容 -->
+    <main class="container mx-auto px-4 pt-28 pb-16">
+        <section class="max-w-4xl mx-auto text-center">
+            <div class="relative mb-10">
+                <div class="w-24 h-24 md:w-32 md:h-32 rounded-full bg-primary/10 flex items-center justify-center mx-auto animate-float">
+                    <i class="fa fa-github text-5xl md:text-6xl text-primary"></i>
+                </div>
+                <div class="absolute -top-4 -right-4 md:-top-6 md:-right-6 bg-secondary text-white text-xs md:text-sm font-bold px-3 py-1 rounded-full shadow-lg">
+                    Hello
+                </div>
+            </div>
+            
+            <h1 class="text-[clamp(2.5rem,5vw,4rem)] font-bold text-dark leading-tight mb-6 text-shadow">
+                Hello, <span class="text-primary">GitHub</span>!
+            </h1>
+            
+            <p class="text-gray-600 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                This is a simple webpage created to celebrate the joy of open source collaboration and the amazing GitHub community.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <a href="https://github.com" target="_blank" class="bg-primary hover:bg-primary/90 text-white font-medium px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                    <i class="fa fa-github"></i>
+                    <span>Visit GitHub</span>
+                </a>
+                <a href="#" class="bg-white hover:bg-gray-50 text-primary border border-primary font-medium px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1 flex items-center gap-2">
+                    <i class="fa fa-code-fork"></i>
+                    <span>Fork Project</span>
+                </a>
+            </div>
+            
+            <!-- 卡片部分 -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <i class="fa fa-code text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Open Source</h3>
+                    <p class="text-gray-600">Share your code with the world and collaborate on amazing projects.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <i class="fa fa-users text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Community</h3>
+                    <p class="text-gray-600">Connect with developers worldwide and build something great together.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-all transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
+                        <i class="fa fa-rocket text-primary"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Innovation</h3>
+                    <p class="text-gray-600">Be part of the future by contributing to cutting-edge technologies.</p>
+                </div>
+            </div>
+            
+            <!-- 统计数据 -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary mb-1">100M+</div>
+                    <div class="text-gray-600">Developers</div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary mb-1">330M+</div>
+                    <div class="text-gray-600">Repositories</div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary mb-1">200+</div>
+                    <div class="text-gray-600">Countries</div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md p-6 text-center">
+                    <div class="text-3xl md:text-4xl font-bold text-primary mb-1">∞</div>
+                    <div class="text-gray-600">Possibilities</div>
+                </div>
+            </div>
+            
+            <!-- 引用 -->
+            <div class="bg-white rounded-xl shadow-lg p-8 relative mb-16">
+                <div class="text-primary/20 text-8xl absolute -top-6 left-4">
+                    <i class="fa fa-quote-left"></i>
+                </div>
+                <p class="text-gray-700 text-xl italic mb-6 relative z-10">
+                    "GitHub has revolutionized the way we develop software. It's not just a platform, it's a community that fuels innovation."
+                </p>
+                <div class="flex items-center">
+                    <img src="https://picsum.photos/id/1005/40/40" alt="Profile image" class="w-10 h-10 rounded-full mr-3">
+                    <div>
+                        <div class="font-bold">Developer Name</div>
+                        <div class="text-gray-500 text-sm">Open Source Enthusiast</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa fa-github text-2xl text-white"></i>
+                        <span class="font-bold text-lg">HelloGitHub</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        A simple webpage to celebrate the GitHub community and open source collaboration.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Resources</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">API Reference</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">GitHub Guides</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Community</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Discussions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Issues</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Events</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to our newsletter to get the latest updates.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800 w-full">
+                        <button type="submit" class="bg-primary hover:bg-primary/90 px-4 py-2 rounded-r-lg transition-colors">
+                            <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2025 HelloGitHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 导航栏滚动效果
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow');
+                nav.classList.remove('py-3', 'shadow-sm');
+            } else {
+                nav.classList.add('py-3', 'shadow-sm');
+                nav.classList.remove('py-2', 'shadow');
+            }
+        });
+        
+        // 添加平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+    
